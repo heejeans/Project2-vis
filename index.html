@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/milligram/1.3.0/milligram.css">
+</head>
+
+<body>
+    <div class="all-content-container">
+        <div style='display:block;'>
+        <h2>Drug Overdose in Connecticut</h2>
+        <div class='tableauPlaceholder' id='viz1634153586344' style='position: relative; width: 1316px; height: 991px; overflow: hidden;display:block;'><noscript><a href='#'><img alt='Analysis of Drug Overdose in Connecticut ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Vi&#47;Vislab2story&#47;Story1&#47;1_rss.png' style='border: none' /></a></noscript>
+            <object class='tableauViz'  style='display:block;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='Vislab2story&#47;Story1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Vi&#47;Vislab2story&#47;Story1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /></object>
+        </div>               
+        <script type='text/javascript'>                    
+            var divElement = document.getElementById('viz1634153586344');                   
+            var vizElement = divElement.getElementsByTagName('object')[0];                    
+            vizElement.style.width='1316px';vizElement.style.height='991px';                    
+            var scriptElement = document.createElement('script');                    
+            scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    
+            vizElement.parentNode.insertBefore(scriptElement, vizElement);               
+        </script>
+        <br>
+        <a href="https://www.kaggle.com/ruchi798/drug-overdose-deaths">Dataset Source</a>
+        <h2>A Look into Drug Overdose</h2>
+        <div class="content-container">
+            <section class="description">
+                <p>When assessing which data set to analyze, our group wanted to choose a topic that was a major issue in our society and needed to be addressed. Although there were plenty of options to do something related to sports, wildlife, or company revenue and profits, we settled on a topic that posed a true public health threat in every community across the world, but specifically the United States: the drug crisis. Drug abuses and overdoses are one of the most pertinent causes of death and have negatively affected so many people, not just those who die from it. As an issue it can be so avoidable with proper education, so through our research we strived to try and educate viewers on the different groups and root causes that could leave people more prone to drug abuse than others.
+                </p>
+                <p>One thing we did prior to analyzing the dataset was to comb through and “clean” the data set to remove outlier data. The dataset provided to us from Kaggle was data between the years of 2012 and 2018, and was almost entirely from Connecticut. However, we discovered that there was some data in the dataset that were outliers from this Connecticut data, as it included very small samples from places like New York, California, and Massachusetts. To filter this out, we had to be very careful because the table gave us a number of different geographic data from each death, but some columns were far less complete than others. We discovered within the data set that “Death County” was by far the most complete of the geographic data, and were able to filter out any data that didn’t come from one of the 8 Connecticut counties.</p>
+                <p>The next key stage of the project was to divide up our search and analysis process into different key sections that would be both engaging to viewers and educational and consistent with the story we are trying to tell through our analysis. After the preliminary assessment of the “cleanliness” and validity of the data, we began to search and try to isolate ways to segment the data to help tell our story. We immediately noticed that the dataset had very comprehensive data on the demographics of people, such as age, sex, and race, and all agreed that looking at the demographics that tend to suffer from drug abuse the most would be an incredibly important thing to look at. Additionally, we had very sound location data, so we decided to make that another section of our project. Finally, we also chose to break down the data by drug types specifically to help people identify which of these drugs are the largest issue in our communities so that we can best educate viewers.</p>
+            </section>
+            <section class="pictures">
+                <img src="assets/dataset.png" alt="">
+            </section>
+        </div>
+        <h2>Topic 1: Drug Type</h2>
+        <div class="content-container">
+            <section class="description">
+                <p>Beginning with the individual drug types, we began combing through the data to slice it in interesting ways that would help us tell our story. The first step was determining which drug was most commonly found in people with reported overdoses. With this in mind, we were able to cross-apply these findings with other pieces of the dataset. It gave us a clear picture on how to continue our iterative process of analyzing the dataset. Through our analysis we determined that heroin was the leading cause of drug overdoses in Connecticut. We plotted this on a horizontal bar graph to ensure that our visualization was beautiful, as there were a number of drugs to compare, and the horizontal chart was able to show the greatest difference in deaths.</p>
+                <p>We needed to figure out if there were any other factors that contributed to these overdoses. Plotting age categories with the overdose data, we found that the two most common categories of ages were people aged 30-50. This was interesting for a variety of reasons. Usually, when people think about drug overdoses, they associate them with younger-aged people, like 20-30s. But after plotting the data, this was a really interesting point of reflection that we had to make. </p>
+            </section>
+            <section class="pictures">
+                <img src="assets/drugtype.png" alt="">
+            </section>
+        </div>
+        <h2>Topic 2: Location</h2>
+        <div class="content-container">
+            <section class="description">
+                <p>Next off, we determined that location would be an interesting factor to look at because Connecticut has one of the largest wealth disparities of any state in the country. There are some areas like Fairfield County that are very wealthy, and others like Litchfield and New Haven that are much poorer. When building both map and symbol map visualizations, an initial problem was that some of the counties were not showing up. However, a lesson we learned was that in Tableau, you must declare specific geographic locations because it cross-references things like county and city names across the entire country. Once we selected “Connecticut” as the state in the menu, we were able to isolate data that was just from Connecticut.</p>
+                <p>An interesting conclusion we drew from this section was that demographically across most counties, white people are the most prone to drug overdoses. Our initial hypothesis was that traditionally marginalized groups such as black or latino populations would be at the greatest risk of suffering from drug abuse, but the data proved us to be incorrect. As seen below, New Haven county which is one of the most populous counties in the state had a larger percentage of deaths from white people than the general population of the county would reflect.</p>
+            </section>
+            <section class="pictures">
+                <img src="assets/location.png" alt="">
+            </section>
+        </div>
+        <h2>Topic 3: Demographics</h2>
+        <div class="content-container">
+            <section class="description">
+                <p>Because our dataset included demographic variables, we decided to use them to further analyze the trends of drug overdoses. Starting off with the gender demographic, initially we were only going to work with two variables, sex and drug overdose IDs, which gave us a single bar in a stacked bar chart. At this point, it was already evident that there were overall more male incidents of drug overdoses, but the visualization was still very limited and not explicit. So we decided to add in another variable, the death county, to evaluate the data across different counties. Sure enough, for every county, male drug overdoses were significantly higher than female overdoses. This visualization also helped us to identify the exact ratio of ODs between the two genders and compare that across counties. We also utilized the race variable to further explore overdose trends through demographics. Using the race variable and overdose IDs, we graphed the numbers into packed bubbles. Through this, we were able to clearly identify that the majority of overdoses identified as white.
+                </p>
+            </section>
+            <section class="pictures">
+                <img src="assets/gender.png" alt="">
+            </section>
+        </div>
+        <h2>Final Thoughts</h2>
+        <div class="final">
+            <section class="description">
+                <p>Overall, this was a challenging yet rewarding project. We learned a number of things about the abilities and limitations of Tableau, discovering that we unfortunately were unable to do calculations on individual measures. For example In trying to calculate how many deaths were a result of multiple drugs, we attempted to break down data based on how many drugs were in each user’s system. This calculation wasn’t able to be processed unfortunately as it required us to cross reference different measures against each other.</p>
+                <p>We also learned a number of lessons about the state of the drug crisis in Connecticut. For one, drugs like Fentanyl and Heroin pose the greatest risk and are the most dangerous. With fentanyl specifically being available over-the-counter, it might be wise of lawmakers to crack down harder on fentanyl prescriptions, and for doctors to seek other alternatives that are less addictive and less dangerous. Additionally as seen in the location data, wealthy places like Fairfield County are much less at risk than poorer areas like Hartford County. Additionally, the perils of drug abuse cross all different racial backgrounds, showing that this is a major issue for the state. We are hoping that our work can help educate viewers on the state of the crisis, and potentially inspire change in the future.</p>
+            </section>
+        </div>
+    </div>
+</body>
